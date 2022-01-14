@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tailwind</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 </head>
 <body>
     <h1 class="shadow-red"></h1>
@@ -13,5 +14,32 @@
         中川先生は昨日の夜、課題委員さんがフォルダに課題を入れっぱなしにしているのを<br>
         私に言ってきたが、私は早く帰りたかった。
     </div>
+    <script>
+        // axios
+        //     .get("http://127.0.0.1:3000")
+        //     .then(res => {
+        //         console.log(res.data);
+        //     })
+
+
+        let data = [
+            {name: "a", price: 140},
+            {name: "b", price: 120},
+            {name: "c", price: 130},
+            {name: "d", price: 150},
+            {name: "f", price: 35},
+        ];
+
+        // 組み合わせを作る
+        // 繰り返し
+        // 調整
+        const limit = 1000
+
+        while(limit - currentPrice < minPrice) {
+            if (limit > data[random].price + currentPrice) {
+                currentPrice += data[random].price
+            }
+        }
+    </script>
 </body>
 </html>

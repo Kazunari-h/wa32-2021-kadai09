@@ -12,6 +12,7 @@
   "dependencies": {
     "@tailwindcss/forms": "^0.3.4",
     "@tailwindcss/line-clamp": "^0.2.2",
+    "axios": "^0.24.0",
     "parcel": "^2.0.1"
   },
   "devDependencies": {

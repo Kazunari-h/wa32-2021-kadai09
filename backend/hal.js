@@ -1,9 +1,8 @@
-const Koa = require("koa");
-const app = new Koa();
 // ライブラリの読み込み
 const puppeteer = require("puppeteer");
 
-async function getDonutData() {
+// 同期処理する関数の実行
+(async () => {
     // ブラウザの立ち上げ
     const browser = await puppeteer.launch();
     // 新しいタブを開く
@@ -34,15 +33,10 @@ async function getDonutData() {
     }, ".item");
 
     console.log(data);
+
     // サイトのスクショ
     await page.screenshot({ path: "topics.png" });
+
     // ブラウザを閉じる
     await browser.close();
-    return data;
-}
-
-app.use(async (ctx) => {
-    ctx.body = await getDonutData();
-});
-
-app.listen(3000);
+})();
